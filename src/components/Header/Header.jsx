@@ -1,6 +1,6 @@
  import axios from 'axios'
 import React, { useState } from 'react'
-import { Alert, Button, Col, Container, Form, Row } from 'react-bootstrap'
+import {  Button, Col, Container, Form, Row } from 'react-bootstrap'
  
  export default function Header() {
 
@@ -16,7 +16,6 @@ const postdata = (e) => {
 e.preventDefault()
 axios.post("http://localhost:3000/data", obj).then(res => {
     if(res.status === 201){
-        alert(res.statusText);
         setAge("")
         setName("")
     }
